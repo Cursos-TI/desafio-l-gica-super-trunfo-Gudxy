@@ -11,13 +11,27 @@ int main() {
     int CDC, PT;
     float area, PIB;
     unsigned long int populacao;
+    int comecar, regras;
+    int opcao;
 
+    printf("Escolha sua opcao\n");
+    printf("1. Comecar Jogo\n");
+    printf("2. Regras do Jogo\n");
+    scanf("%d", &opcao);
+
+    
+
+
+
+    switch (opcao)
+    {
+        case 1: 
     printf("== Carta A01 ==\n");
 
-    printf("Nome da cidade: ");
+    printf("Nome do pais: ");
     scanf("%s", nome);
 
-    printf("Codigo da cidade: ");
+    printf("Codigo do pais: ");
     scanf("%d", &CDC);
 
     printf("Pontos Turisticos: ");
@@ -26,16 +40,16 @@ int main() {
     printf("Populacao: ");
     scanf("%u", &populacao);
 
-    printf("Area da cidade em KM²: ");
+    printf("Area do pais em KM²: ");
     scanf("%f", &area);
 
-    printf("PIB da cidade: ");
+    printf("PIB do pais: ");
     scanf("%f", &PIB);
 
     float Densidade_Populacional = populacao / area;
     float PIB_per_capita = PIB / populacao;
 
-    printf("\n-- Informações da Cidade A01 --\n");
+    printf("\n-- Informações do pais A01 --\n");
     printf("Nome: %s\n", nome);
     printf("Código: %d\n", CDC);
     printf("População: %d\n", populacao);
@@ -53,10 +67,10 @@ int main() {
 
     printf("\n-- Carta B02 --\n");
 
-    printf("Nome da segunda cidade: ");
+    printf("Nome do segundo pais: ");
     scanf("%s", nome2);
 
-    printf("Codigo da segunda cidade: ");
+    printf("Codigo do segundo pais: ");
     scanf("%d", &CDC2);
 
     printf("Pontos Turisticos: ");
@@ -65,16 +79,16 @@ int main() {
     printf("Populacao: ");
     scanf("%u", &populacao2);
 
-    printf("Area da segunda cidade em KM²: ");
+    printf("Area do segundo pais em KM²: ");
     scanf("%f", &area2);
 
-    printf("PIB da segunda cidade: ");
+    printf("PIB do segundo pais: ");
     scanf("%f", &PIB2);
 
     float Densidade_Populacional2 = populacao2 / area2;
     float PIB_per_capita2 = PIB2 / populacao2;
     
-    printf("\n-- Informações da Cidade B02 --\n");
+    printf("\n-- Informações do Segundo Pais B02 --\n");
     printf("Nome: %s\n", nome2);
     printf("Código: %d\n", CDC2);
     printf("População: %d\n", populacao2);
@@ -135,7 +149,27 @@ int main() {
     } else if (PIB_per_capita < PIB_per_capita2) {
         printf("Carta 2 venceu em PIB Per Capita!\n");
     }
-    
+    break;
+     
+    case 2: 
+        printf("Escolha a regra para ser explicada\n");
+        printf("1. Paises - 2. Informacao: \n");
+        scanf("%d", &regras);
+
+        switch (regras)
+    {
+        case 1:
+            printf("Escolhe 2 paises antes de comecar o Jogo\n");
+        break;
+
+        case 2:
+        printf("Pesquise e coloque as informacoes correta de cada pais sem erros\n");
+        break;
+    }
+
+
+}
+
     
     // Definição das variáveis para armazenar as propriedades das cidades
     // Você pode utilizar o código do primeiro desafio
