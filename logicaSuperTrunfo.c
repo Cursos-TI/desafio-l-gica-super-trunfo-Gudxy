@@ -106,16 +106,20 @@ int main() {
             if (comparacao == 1) {  // MAIOR
                 switch (atributo) {
                     case 1:
-                        if (area > area2)
-                            printf("Carta 1 venceu em área!\n");
-                        else
-                            printf("Carta 2 perdeu em área!\n");
+                            area > area2 ? printf("Carta 1 venceu em area!\n") : printf("Carta 2 Perdeu em area\n");
+
+                        //if (area > area2)
+                            //printf("Carta 1 venceu em área!\n");
+                        //else
+                            //printf("Carta 2 perdeu em área!\n");
                         break;
                     case 2:
-                        if (populacao > populacao2)
-                            printf("Carta 1 venceu em população!\n");
-                        else
-                            printf("Carta 2 perdeu em população!\n");
+                        PIB > PIB2 ? printf("Carta 1 venceu em PIB!\n") : printf("Carta 2 Perdeu em area\n");    
+                    
+                    //if (populacao > populacao2)
+                            //printf("Carta 1 venceu em população!\n");
+                        //else
+                            //printf("Carta 2 perdeu em população!\n");
                         break;
                     case 3:
                         if (PIB > PIB2)
